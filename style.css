@@ -13,6 +13,7 @@ body {
 
 .logo img {
     height: 50px; /* Adjust according to your logo size */
+    border-radius: 50%;
 }
 
 .nav-links {
@@ -35,6 +36,7 @@ body {
 .search-container {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .search-input {
@@ -43,6 +45,7 @@ body {
     border-radius: 4px 0 0 4px;
     outline: none;
     width: 200px;
+    
 }
 
 .search-button {
