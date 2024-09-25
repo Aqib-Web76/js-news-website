@@ -10,32 +10,37 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="./assets/logo.png"  alt="Logo">
+            <img src="./assets/logo.png" alt="Logo">
         </div>
         <ul class="nav-links">
-            <li><a href="#">IPL</a></li>
-            <li><a href="#">Finance</a></li>
-            <li><a href="#">Political</a></li>
+            <li class="nav-item" data-topic="IPL"><a href="#">IPL</a></li>
+            <li class="nav-item" data-topic="Finance"><a href="#">Finance</a></li>
+            <li class="nav-item" data-topic="Political"><a href="#">Political</a></li>
         </ul>
         <div class="search-container">
-            <input type="text" placeholder="e.g., Science" class="search-input">
-            <button class="search-button">Search</button>
+            <input type="text" placeholder="e.g., Science" class="search-input" id="search-input">
+            <button class="search-button" id="search-button">Search</button>
         </div>
     </nav>
     <main>
-        <div class="container cards-container flex">
-            <div class="card">
-                <div class="card-header">
-                    <img src="https://via.placeholder.com/400x200 " alt="news-image" title="news-img">
-                </div>
-                <div class="card-content">
-                    <h3>this is the title</h3>
-                    <h4>End Gadget
-                        <p class="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, officia.</p>
-                    </h4>
-                </div>
-            </div>
+        <div class="container cards-container" id="cards-container">
+            <!-- News cards will be dynamically injected here -->
         </div>
     </main>
+    <button id="go-to-top" class="go-to-top" title="Go to Top">↑</button>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" title="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">this is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, officia.</p>
+            </div>
+        </div>
+    </template>
+    <script src="app.js"></script>
 </body>
 </html>
